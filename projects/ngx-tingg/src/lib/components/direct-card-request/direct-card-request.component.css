@@ -1,0 +1,242 @@
+* {
+    font-family: "Helvetica Neue", Helvetica;
+    font-size: 15px;
+    font-variant: normal;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100%;
+    min-width: 380px;
+}
+
+form {
+    width: 480px;
+    margin: 20px 0;
+    padding: 10px
+}
+
+.group {
+    background: white;
+    box-shadow: 0 7px 14px 0 rgba(49, 49, 93, 0.10), 0 3px 6px 0 rgba(0, 0, 0, 0.08);
+    border-radius: 4px;
+    margin-bottom: 20px;
+}
+
+label {
+    position: relative;
+    color: #8898AA;
+    font-weight: 300;
+    height: 40px;
+    line-height: 40px;
+    display: flex;
+    flex-direction: row;
+}
+
+.group label:not(:last-child) {
+    border-bottom: 1px solid #F0F5FA;
+}
+
+label>span {
+    width: 120px;
+    text-align: right;
+    margin-right: 30px;
+}
+
+.field {
+    background: transparent;
+    font-weight: 300;
+    border: 0;
+    color: #31325F;
+    outline: none;
+    flex: 1;
+    padding-right: 10px;
+    padding-left: 10px;
+    cursor: text;
+}
+
+.field::-webkit-input-placeholder {
+    color: #CFD7E0;
+}
+
+.field::-moz-placeholder {
+    color: #CFD7E0;
+}
+
+button {
+    float: left;
+    display: block;
+    background: #666EE8;
+    color: white;
+    box-shadow: 0 7px 14px 0 rgba(49, 49, 93, 0.10), 0 3px 6px 0 rgba(0, 0, 0, 0.08);
+    border-radius: 4px;
+    border: 0;
+    margin-top: 20px;
+    font-size: 15px;
+    font-weight: 400;
+    width: 100%;
+    height: 40px;
+    line-height: 38px;
+    outline: none;
+    cursor: pointer;
+}
+
+button.is-invalid {
+    background: #666ee875;
+    cursor: not-allowed;
+}
+
+
+/* button:focus {
+    background: #555ABF;
+} */
+
+
+/* button:active {
+    background: #43458B;
+} */
+
+
+/* Chrome, Safari, Edge, Opera */
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+
+/* Firefox */
+
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+.group.half {
+    width: 50%;
+}
+
+.group.half>label {
+    display: flex;
+    justify-content: space-around;
+}
+
+.msmsms {
+    display: flex;
+    gap: 10px;
+}
+
+
+/* ****************** LOADER ****************** */
+
+.preloader-dot-circle-rotator {
+    position: relative;
+    width: 6px;
+    height: 6px;
+    left: 46%;
+    left: calc(50% - 6px);
+    left: -o-calc(50% - 6px);
+    left: -ms-calc(50% - 6px);
+    left: -webkit-calc(50% - 6px);
+    left: -moz-calc(50% - 6px);
+    border-radius: 12px;
+    background-color: rgb(214, 212, 212);
+    transform-origin: 50% 50%;
+    -o-transform-origin: 50% 50%;
+    -ms-transform-origin: 50% 50%;
+    -webkit-transform-origin: 50% 50%;
+    -moz-transform-origin: 50% 50%;
+    animation: cssload-loader 1.15s ease-in-out infinite;
+    -o-animation: cssload-loader 1.15s ease-in-out infinite;
+    -ms-animation: cssload-loader 1.15s ease-in-out infinite;
+    -webkit-animation: cssload-loader 1.15s ease-in-out infinite;
+    -moz-animation: cssload-loader 1.15s ease-in-out infinite;
+    &:before {
+        content: "";
+        position: absolute;
+        background-color: rgb(214, 212, 212);
+        top: 0px;
+        left: -24px;
+        height: 6px;
+        width: 6px;
+        border-radius: 12px;
+    }
+    &:after {
+        content: "";
+        position: absolute;
+        background-color: rgb(214, 212, 212);
+        top: 0px;
+        left: 24px;
+        height: 6px;
+        width: 6px;
+        border-radius: 12px;
+    }
+}
+
+@keyframes cssload-loader {
+    0% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(180deg);
+    }
+    100% {
+        transform: rotate(180deg);
+    }
+}
+
+@-o-keyframes cssload-loader {
+    0% {
+        -o-transform: rotate(0deg);
+    }
+    50% {
+        -o-transform: rotate(180deg);
+    }
+    100% {
+        -o-transform: rotate(180deg);
+    }
+}
+
+@-ms-keyframes cssload-loader {
+    0% {
+        -ms-transform: rotate(0deg);
+    }
+    50% {
+        -ms-transform: rotate(180deg);
+    }
+    100% {
+        -ms-transform: rotate(180deg);
+    }
+}
+
+@-webkit-keyframes cssload-loader {
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+    50% {
+        -webkit-transform: rotate(180deg);
+    }
+    100% {
+        -webkit-transform: rotate(180deg);
+    }
+}
+
+@-moz-keyframes cssload-loader {
+    0% {
+        -moz-transform: rotate(0deg);
+    }
+    50% {
+        -moz-transform: rotate(180deg);
+    }
+    100% {
+        -moz-transform: rotate(180deg);
+    }
+}

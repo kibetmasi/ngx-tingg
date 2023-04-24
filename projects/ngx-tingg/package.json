@@ -1,0 +1,38 @@
+{
+    "name": "ngx-tingg",
+    "version": "0.0.4",
+    "author": { "name": "Masi Kibe", "email": "masikibe@gmail.com" },
+    "peerDependencies": {
+        "@angular/common": "^15.1.0",
+        "@angular/core": "^15.1.0"
+    },
+    "dependencies": {
+        "tslib": "^2.3.0",
+        "@angular/material": "^15.0.0",
+        "@angular/cdk": "^15.0.0"
+    },
+    "sideEffects": false,
+
+    "description": "An Angular library that abstracts the complexity of using Cellulant's Tingg APIs.",
+    "keywords": ["Cellulant", "Tingg APIs", "Tingg Africa", "Africa"],
+    "bugs": {
+        "url": "https://github.com/kibetmasi/ngx-tingg/issues"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/kibetmasi/ngx-tingg"
+    },
+    "homepage": "https://github.com/kibetmasi/ngx-tingg",
+    "license": "MIT",
+
+    "scripts": {
+        "ng": "ng",
+        "start": "ng serve",
+        "build": "ng build",
+        "watch": "ng build --watch --configuration development",
+        "test": "ng test",
+        "e2e": "ng e2e",
+        "cypress:open": "cypress open",
+        "cypress:run": "cypress run"
+    }
+}

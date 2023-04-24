@@ -1,0 +1,62 @@
+<body>
+    <form [formGroup]="chargeForm" [autocomplete]="'off'">
+
+        <div class="msmsms">
+
+            <div class="group half">
+                <label>
+                <span>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/M-PESA_LOGO-01.svg/64px-M-PESA_LOGO-01.svg.png" alt="">
+                </span>
+                <div class="pay-method">
+                    <input type="radio" checked>
+                </div>
+              </label>
+            </div>
+            <div class="group half" [style.filter]="'grayscale(1)'">
+                <label>
+                <span style="display: flex; justify-content: center; align-items: center;">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Visa_Inc._logo.svg/64px-Visa_Inc._logo.svg.png?20170118154621" alt="">
+                </span>
+                <div class="pay-method">
+                    <input type="radio" disabled>
+                </div>
+            </label>
+            </div>
+        </div>
+
+
+        <div class="group">
+            <label>
+            <span>Amount</span>
+            <input formControlName="charge_amount"  name="first-name" class="field" placeholder="Ex. 300" />
+          </label>
+
+            <label>
+            <span>Phone Number</span>
+            <input  formControlName="charge_msisdn" name="last-name" class="field" placeholder="Ex. 254787654321"  />
+          </label>
+        </div>
+
+        <div class="group">
+            <label>
+            <span>Currency</span>
+            <input formControlName="currency_code" name="address_line1" class="field" placeholder="" />
+          </label>
+
+            <label>
+            <span>Country</span>
+            <input formControlName="country_code" name="address_line2" class="field" placeholder="" />
+          </label>
+        </div>
+
+
+        <div *ngIf="loadingService.isLoading$ | async" class="col-md-2">
+            <div class="preloader-dot-circle-rotator"></div>
+        </div>
+
+        <button [ngClass]="{ 'is-invalid': !chargeForm.valid }" [disabled]="!chargeForm.valid" (click)="chargeRequest()" type="submit" class="submitcr">
+          Make payment
+        </button>
+    </form>
+</body>

@@ -41,7 +41,7 @@ Install dependencies
 
 On your ```app.module.ts``` or the component to be used, import the following:
 
-```bash
+```typescript
   import { NgxTinggModule } from 'ngx-tingg';
 
   @NgModule({
@@ -86,7 +86,7 @@ For table  only
 | :-------- | :------- | :------------------------- |
 | `@Input(): country_code` = `KEN` | `string` | Country code |
 | `@Input(): currency_code` = `KES` | `string` |  Currency code |
-| `@Input(): service_code` = `string` | undefined |  Service code |
+| `@Input(): service_code` = `undefined` | `string` |  Service code |
 | `@Input(): merchant_transaction_id` = `random` | `string` |  Merchant ID code |
 | `@Input(): charge_amount` = `undefined` | `number` |  Amount |
 | `@Input(): charge_msisdn` = `undefined` | `number` |  Phone number |
